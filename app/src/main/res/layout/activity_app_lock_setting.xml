@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_shape_circle_v1"
+            android:contentDescription="@string/image_openError_text"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_x30"
+            app:tint="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sebang_gothic_bold"
+            android:text="@string/activity_app_lock_setting__app_lock_title"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!-- PIN 설정 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/setting_set_pin_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/image_openError_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_fiber_pin_x30" />
+
+        <TextView
+            android:id="@+id/setting_set_pin_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/sebang_gothic"
+            android:singleLine="false"
+            android:text="@string/activity_app_lock_setting__set_pin"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/settingButton_set_pin"
+            app:layout_constraintStart_toEndOf="@+id/setting_set_pin_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/settingButton_set_pin"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center|end"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/checkbox_custom_ui"
+            android:button="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/setting_set_pin_textView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 변경 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/setting_lock_app_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/image_openError_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_edit_note_x30"
+            app:tint="@color/mainBlue"/>
+
+        <TextView
+            android:id="@+id/setting_lock_app_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/sebang_gothic"
+            android:singleLine="false"
+            android:text="@string/activity_app_lock_setting__change_pin"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/setting_lock_app"
+            app:layout_constraintStart_toEndOf="@+id/setting_lock_app_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/setting_lock_app"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|end"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_shape_circle_v1"
+            android:scaleType="fitCenter"
+            android:padding="3dp"
+            android:src="@drawable/ic_baseline_settings_x30"
+            android:contentDescription="@string/image_openError_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/setting_lock_app_textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#333333" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

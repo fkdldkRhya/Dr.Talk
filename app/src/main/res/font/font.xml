@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- SEBANG GOTHIC normal font -->
+    <font
+        app:fontStyle = "normal"
+        app:fontWeight = "400"
+        app:font = "@font/sebang_gothic"/>
+
+    <!-- SEBANG GOTHIC bold font -->
+    <font
+        app:fontStyle = "normal"
+        app:fontWeight = "700"
+        app:font = "@font/sebang_gothic_bold"/>
+</font-family>

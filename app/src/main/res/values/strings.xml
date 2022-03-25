@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">Dr.Talk</string>
+
+    <!-- Image open error -->
+    <string name="image_openError_text">An error occurred while importing the image.</string>
+
+
+    <string name="copyright_text">Copyright 2021 CHOI SI-HUN. All rights reserved.</string>
+
+    <!--
+        String name generation rule
+        name="<XML File name>__Object name"
+
+        ** XML File name : Replace spacing with underline
+        ** Object name : Replace spacing with underline
+    -->
+
+
+    <!-- layout / activity_start_logo.xml -->
+    <string name="activity_start_logo__appTitleTextView">Dr. Talk</string>
+
+
+    <!-- layout / activity_request.xml -->
+    <string name="activity_request__activityTitle">이용약관 동의 및 권한 승인</string>
+    <string name="activity_request__permissionRequestButton">권한 승인 요청</string>
+    <string name="activity_request__permissionStorageText">저장소 쓰기/읽기 권한</string>
+    <string name="activity_request__permissionCameraText">카메라 사용 권한</string>
+    <string name="activity_request__dontDozeModeText">절전 모드(Doze Mode) 해제</string>
+
+
+    <!-- layout / activity_show_dr_info.xml -->
+    <string name="activity_show_dr_info__title">의사 정보</string>
+    <string name="activity_show_dr_info__drLicenseTitleTextView">학력/자격면허</string>
+    <string name="activity_show_dr_info__drFocTitleTextView">주요 진료 분야</string>
+    <string name="activity_show_dr_info__drOthersTitleTextView">기타</string>
+
+
+    <!-- menu / menu_setting_popmenu.xml -->
+    <string name="menu_setting_popmenu__item_ascending">오름차순 정렬</string>
+    <string name="menu_setting_popmenu__item_descending">내림차순 정렬</string>
+
+
+    <!-- layout / activity_search.xml -->
+    <string name="activity_search__p_text">검색</string>
+
+
+    <!-- layout / activity_show_dr_info.xml -->
+    <string name="activity_show_dr_info__chat">채팅</string>
+    <string name="activity_show_dr_info__review">리뷰</string>
+
+
+    <!-- layout / activity_my_info.xml -->
+    <string name="activity_my_info__management_account_title">계정 관리 &gt;</string>
+    <string name="activity_my_info__edit_account">정보 변경</string>
+    <string name="activity_my_info__logout">로그아웃</string>
+    <string name="activity_my_info__load_text">LOADING…</string>
+    <string name="activity_my_info__setting_notice">메시지 수신 알림 사용</string>
+    <string name="activity_my_info__setting_data_save_mod">데이터 절약 모드</string>
+    <string name="activity_my_info__setting_block_user">수신 차단 설정</string>
+    <string name="activity_my_info__setting_lock_app">앱 잠금</string>
+
+
+    <!-- layout / activity_pin_lock.xml -->
+    <string name="activity_pin_lock__input_pin_text">PIN을 입력해주세요</string>
+
+
+    <!-- layout / activity_app_lock_setting.xml -->
+    <string name="activity_app_lock_setting__app_lock_title">앱 잠금</string>
+    <string name="activity_app_lock_setting__set_pin">PIN 잠금 사용</string>
+    <string name="activity_app_lock_setting__change_pin">PIN 변경</string>
+    <string name="activity_app_lock_setting__set_pin_title">설정할 PIN을 입력해 주세요.</string>
+    <string name="activity_app_lock_setting__set_pin_re_title">설정할 PIN을 한 번 더 입력해 주세요.</string>
+    <string name="activity_app_lock_setting__set_pin_inc_re_title">입력된 PIN이 잘못되었습니다. 다시 입력해 주세요.</string>
+
+
+    <!-- layout / activity_edit_my_info.xml -->
+    <string name="activity_edit_my_info__change_image">변경</string>
+    <string name="activity_edit_my_info__id">ID</string>
+    <string name="activity_edit_my_info__username">사용자 이름</string>
+    <string name="activity_edit_my_info__email">이메일</string>
+    <string name="activity_edit_my_info__birthday">생년월일</string>
+    <string name="activity_edit_my_info__password_change">비밀번호 변경</string>
+    <string name="activity_edit_my_info__description">의사 설명</string>
+    <string name="activity_edit_my_info__save">변경사항 저장</string>
+    <string name="activity_edit_my_info__phone">전화번호</string>
+    <string name="activity_edit_my_info__location">위치</string>
+    <string name="activity_edit_my_info__type">분야</string>
+
+
+    <!-- layout / activity_ai_result.xml -->
+    <string name="activity_ai_result__ai_result_title">AI 진단 결과</string>
+    <string name="activity_ai_result__ai_eye_type_1">안검하수</string>
+    <string name="activity_ai_result__ai_eye_type_2">결막염</string>
+    <string name="activity_ai_result__ai_eye_type_3">다래끼</string>
+    <string name="activity_ai_result__close">닫기</string>
+</resources>

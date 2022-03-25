@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_shape_v1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_shape_circle_v1"
+                android:contentDescription="@string/image_openError_text"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_x30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#000000" />
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints="검색"
+                android:background="@null"
+                android:fontFamily="@font/sebang_gothic"
+                android:hint="@string/activity_search__p_text"
+                android:inputType="text"
+                android:textColorHighlight="#92BEFF"
+                android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/allRemoveButton"
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                app:layout_constraintTop_toTopOf="parent">
+                <!-- Focus -->
+                <requestFocus/>
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/allRemoveButton"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_shape_circle_v1"
+                android:contentDescription="@string/image_openError_text"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_close_x30"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#000000" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResultRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+</androidx.constraintlayout.widget.ConstraintLayout>

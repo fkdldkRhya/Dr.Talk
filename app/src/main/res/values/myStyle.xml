@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tap layout Style -->
+    <style name="TabTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="fontFamily">@font/sebang_gothic</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- PopupMenu Style -->
+    <style name="RoundPopupMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@drawable/popupmenu_round_layout</item>
+        <item name="android:fontFamily">@font/sebang_gothic</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_shape_circle_v1"
+            android:contentDescription="@string/image_openError_text"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_x30"
+            app:tint="#000000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sebang_gothic_bold"
+            android:text="@string/activity_show_dr_info__title"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="#FFFFFF"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/chattingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/drImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/image_openError_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <kro.kr.rhya_network.dr_talk.util.AutoResizeTextView
+                android:id="@+id/drNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drImageView" />
+
+            <kro.kr.rhya_network.dr_talk.util.AutoResizeTextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:gravity="center"
+                android:maxLines="5"
+                android:textColor="#777777"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drNameTextView"
+                wheel:layout_constraintEnd_toEndOf="parent"
+                wheel:layout_constraintHorizontal_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/phoneImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/image_openError_text"
+                android:src="@drawable/ic_baseline_add_ic_call_x30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+                app:tint="#3386FF" />
+
+            <kro.kr.rhya_network.dr_talk.util.AutoResizeTextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:gravity="center|start"
+                android:maxLines="3"
+                android:textColor="#777777"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/phoneImageView"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+            <ImageView
+                android:id="@+id/locationImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/image_openError_text"
+                android:src="@drawable/ic_baseline_location_on_x30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneImageView"
+                app:tint="#3386FF" />
+
+            <kro.kr.rhya_network.dr_talk.util.AutoResizeTextView
+                android:id="@+id/locationTextView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:gravity="center|start"
+                android:maxLines="4"
+                android:textColor="#777777"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/locationImageView"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextView" />
+
+            <ImageView
+                android:id="@+id/typeImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:contentDescription="@string/image_openError_text"
+                android:src="@drawable/ic_baseline_school_x30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationImageView"
+                app:tint="#3386FF" />
+
+            <kro.kr.rhya_network.dr_talk.util.AutoResizeTextView
+                android:id="@+id/typeTextView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:gravity="center|start"
+                android:maxLines="3"
+                android:textColor="#777777"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/typeImageView"
+                app:layout_constraintTop_toBottomOf="@+id/locationTextView" />
+
+            <TextView
+                android:id="@+id/drLicenseTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/sebang_gothic_bold"
+                android:text="@string/activity_show_dr_info__drLicenseTitleTextView"
+                android:textColor="#3386FF"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/typeTextView" />
+
+            <TextView
+                android:id="@+id/drLicenseTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:padding="3dp"
+                android:textColor="#777777"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drLicenseTitleTextView" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#aaa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drLicenseTextView" />
+
+            <TextView
+                android:id="@+id/drFocTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/sebang_gothic_bold"
+                android:text="@string/activity_show_dr_info__drFocTitleTextView"
+                android:textColor="#3386FF"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/drFocTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:padding="3dp"
+                android:textColor="#777777"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drFocTitleTextView" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:background="#aaa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drFocTextView" />
+
+            <TextView
+                android:id="@+id/drOthersTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/sebang_gothic_bold"
+                android:text="@string/activity_show_dr_info__drOthersTitleTextView"
+                android:textColor="#3386FF"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/drOthersTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/sebang_gothic"
+                android:padding="3dp"
+                android:textColor="#777777"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drOthersTitleTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/chattingButton"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_shape_v1"
+        android:contentDescription="@string/image_openError_text"
+        android:drawableStart="@drawable/ic_chat_white"
+        android:fontFamily="@font/sebang_gothic"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:scaleType="fitCenter"
+        android:text="@string/activity_show_dr_info__chat"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--
+    <Button
+        android:id="@+id/reviewButton"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_shape_v3"
+        android:contentDescription="@string/image_openError_text"
+        android:drawableStart="@drawable/ic_baseline_rate_review_x30"
+        android:fontFamily="@font/sebang_gothic"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:scaleType="fitCenter"
+        android:text="@string/activity_show_dr_info__review"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chattingButton"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+        -->
+</androidx.constraintlayout.widget.ConstraintLayout>

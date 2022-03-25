@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_shape_circle_v1"
+            android:contentDescription="@string/image_openError_text"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_x30"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sebang_gothic_bold"
+            android:text="@string/activity_my_info__edit_account"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:overScrollMode="never"
+        android:scrollbarThumbVertical="@color/mainBlue"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/userImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/image_openError_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/editImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_shape_v3"
+                android:contentDescription="@string/image_openError_text"
+                android:drawableStart="@drawable/ic_baseline_edit_note_black_x30"
+                android:fontFamily="@font/sebang_gothic"
+                android:minWidth="100dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:scaleType="fitCenter"
+                android:stateListAnimator="@null"
+                android:text="@string/activity_edit_my_info__change_image"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userImageView" />
+
+
+            <!-- User id layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userIDLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editImageButton">
+
+                <ImageView
+                    android:id="@+id/userIDImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_profile_user_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userIDEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/userIDEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__id"
+                    android:enabled="false"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__id"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/userIDImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- User name layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userIDLayout">
+
+                <ImageView
+                    android:id="@+id/userNameImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_drive_file_rename_outline_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userNameEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/userNameEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__username"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__username"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/userNameImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- User email layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userEmailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userNameLayout">
+
+                <ImageView
+                    android:id="@+id/userEmailImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_email_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userEmailEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/userEmailEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__email"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="60"
+                    android:maxLines="1"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/userEmailImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- User email layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userBirthdayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userEmailLayout">
+
+                <ImageView
+                    android:id="@+id/userBirthdayImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_calendar_today_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userBirthdayEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/userBirthdayEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__birthday"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__birthday"
+                    android:maxLength="40"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/userBirthdayImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Doctor phone layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drPhoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/changePasswordLayout">
+
+                <ImageView
+                    android:id="@+id/drPhoneImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_add_ic_call_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/drPhoneEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#3386FF" />
+
+                <EditText
+                    android:id="@+id/drPhoneEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__phone"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__phone"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/drPhoneImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Doctor location layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drLocationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drPhoneLayout">
+
+                <ImageView
+                    android:id="@+id/drLocationImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_location_on_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/drLocationEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#3386FF" />
+
+                <EditText
+                    android:id="@+id/drLocationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__location"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__location"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/drLocationImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Doctor type layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drTypeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drLocationLayout">
+
+                <ImageView
+                    android:id="@+id/drTypeImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_school_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/drTypeEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#3386FF" />
+
+                <EditText
+                    android:id="@+id/drTypeEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__type"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__type"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/drTypeImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Doctor description layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drDescriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drTypeLayout">
+
+                <ImageView
+                    android:id="@+id/drDescriptionImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/image_openError_text"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_description_x30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/drDescriptionEditText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#3386FF" />
+
+                <EditText
+                    android:id="@+id/drDescriptionEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="@string/activity_edit_my_info__description"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:hint="@string/activity_edit_my_info__description"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHighlight="#92BEFF"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/drDescriptionImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Doctor licenses layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drLicensesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drDescriptionLayout">
+
+                <TextView
+                    android:id="@+id/drLicensesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sebang_gothic_bold"
+                    android:text="@string/activity_show_dr_info__drLicenseTitleTextView"
+                    android:textColor="#3386FF"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/drLicensesTextView">
+
+                    <EditText
+                        android:id="@+id/drLicensesEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@null"
+                        android:fontFamily="@font/sebang_gothic"
+                        android:hint="@null"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:textColorHighlight="#92BEFF"
+                        android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                        android:textSize="15sp" />
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Doctor licenses layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drFocLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drLicensesLayout">
+
+                <TextView
+                    android:id="@+id/drFocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sebang_gothic_bold"
+                    android:text="@string/activity_show_dr_info__drFocTitleTextView"
+                    android:textColor="#3386FF"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/drFocTextView">
+
+                    <EditText
+                        android:id="@+id/drFocEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@null"
+                        android:fontFamily="@font/sebang_gothic"
+                        android:hint="@null"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:textColorHighlight="#92BEFF"
+                        android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                        android:textSize="15sp"
+                        android:maxLength="300"/>
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- Doctor other layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/drOtherLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drFocLayout">
+
+                <TextView
+                    android:id="@+id/drOtherTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sebang_gothic_bold"
+                    android:text="@string/activity_show_dr_info__drOthersTitleTextView"
+                    android:textColor="#3386FF"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/drOtherTextView">
+
+                    <EditText
+                        android:id="@+id/drOtherEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@null"
+                        android:fontFamily="@font/sebang_gothic"
+                        android:hint="@null"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:textColorHighlight="#92BEFF"
+                        android:textCursorDrawable="@drawable/edit_text_cursor_color"
+                        android:textSize="15sp"
+                        android:maxLength="100"/>
+                </ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- User password change button layout -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/changePasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userBirthdayLayout">
+
+                <Button
+                    android:id="@+id/changePasswordButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_shape_v1"
+                    android:contentDescription="@string/image_openError_text"
+                    android:drawableStart="@drawable/ic_baseline_password_x30"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:minWidth="100dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/activity_edit_my_info__password_change"
+                    android:textColor="@color/white" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <!-- Change info save button layout -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/saveInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drOtherLayout">
+
+                <Button
+                    android:id="@+id/saveInfoButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_shape_v3"
+                    android:contentDescription="@string/image_openError_text"
+                    android:drawableStart="@drawable/ic_baseline_save_x30"
+                    android:fontFamily="@font/sebang_gothic"
+                    android:minWidth="100dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/activity_edit_my_info__save"
+                    android:textColor="@color/black" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

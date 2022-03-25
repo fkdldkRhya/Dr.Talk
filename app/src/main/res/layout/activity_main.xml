@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+
+    <!-- Top layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <!-- Dr.Talk app text -->
+        <TextView
+            android:id="@+id/drTalkAppText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/sebang_gothic_bold"
+            android:text="@string/app_name"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- Search button -->
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_shape_circle_v1"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_search_x30"
+            android:contentDescription="@string/image_openError_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/settingButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#333333" />
+        <!-- Setting button -->
+        <ImageButton
+            android:id="@+id/settingButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button_shape_circle_v1"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_settings_x30"
+            android:contentDescription="@string/image_openError_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#333333" />
+    </androidx.constraintlayout.widget.ConstraintLayout >
+
+
+    <!-- View pager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <!-- Tab layout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mainTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:tabTextAppearance="@style/TabTextStyle"
+        app:tabTextColor="#000000"
+        app:tabIndicatorColor="#1860CA"
+        app:tabSelectedTextColor="#3386FF"/>
+</LinearLayout>

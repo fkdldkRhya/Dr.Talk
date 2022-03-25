@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Dr_Talk" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#3386FF</item>
+        <item name="colorPrimaryVariant">#1860CA</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#00AEFF</item>
+        <item name="colorSecondaryVariant">#0080BC</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowActivityTransitions">true</item>
+
+        <!-- Handle color -->
+        <item name="colorControlActivated">#3386FF</item>
+
+        <!-- PopupMenu style -->
+        <item name="android:popupMenuStyle">@style/RoundPopupMenuStyle</item>
+    </style>
+</resources>

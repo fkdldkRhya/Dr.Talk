@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kro.kr.rhya_network.dr_talk">
+
+
+    <!-- 인터넷 사용 권한 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 인터넷 연결 확인 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 카메라 사용 권한 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 외부 저장소 사용 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <!-- 절전모드 권한 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:requestLegacyExternalStorage="true"
+
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher_doctor"
+        android:roundIcon="@mipmap/ic_launcher_doctor_round"
+
+        android:supportsRtl="true"
+
+        android:clearTaskOnLaunch="true"
+
+        android:screenOrientation="portrait"
+
+        android:theme="@style/Theme.Dr_Talk"
+
+        android:name=".application.RhyaApplication"
+        tools:targetApi="n">
+
+        <!-- Google ad mob application id -->
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3414125324355914~4767944749"/>
+
+        <!-- Main activity : activity_start_logo.xml -->
+
+        <activity
+            android:name=".activity.StartLogoActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Request activity : activity_request.xml -->
+        <activity android:name=".activity.RequestActivity" />
+
+        <!-- Login activity : activity_login.xml -->
+        <activity android:name=".activity.LoginActivity" />
+
+        <!-- Main activity : activity_main.xml -->
+        <activity android:name=".activity.MainActivity" />
+
+        <!-- Show dr. info activity : activity_show_dr_info.xml -->
+        <activity android:name=".activity.ShowDrInfoActivity" />
+
+        <!-- Search activity : activity_search.xml -->
+        <activity android:name=".activity.SearchActivity" />
+
+        <!-- PIN Lock activity : activity_pin_lock.xml -->
+        <activity android:name=".activity.PINLockActivity" />
+
+        <!-- App lock setting activity : activity_app_lock_setting.xml -->
+        <activity android:name=".activity.AppLockSettingActivity" />
+
+        <!-- Edit account info : activity_edit_mt_info.xml -->
+        <activity android:name=".activity.EditMyInfoActivity"/>
+
+        <!-- Chatting activity : activity_chatting.xml -->
+        <activity android:name=".activity.ChattingActivity" />
+
+        <!-- AI Result activity : activity_ai_result.xml -->
+        <activity android:name=".activity.AIResultActivity"/>
+    </application>
+</manifest>

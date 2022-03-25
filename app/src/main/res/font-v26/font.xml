@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- SEBANG GOTHIC normal font -->
+    <font
+        android:fontStyle = "normal"
+        android:fontWeight = "400"
+        android:font = "@font/sebang_gothic"/>
+
+    <!-- SEBANG GOTHIC bold font -->
+    <font
+        android:fontStyle = "normal"
+        android:fontWeight = "700"
+        android:font = "@font/sebang_gothic_bold"/>
+</font-family>
